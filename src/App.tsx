@@ -3,7 +3,7 @@ import { testAPI } from "./lib/api/testAPI";
 
 function App() {
   useEffect(() => {
-    testAPI("5318a13f480b07a76f3b2969").then((res) => console.log(res));
+    testAPI().then((res) => console.log(res));
   }, []);
   return (
     <div className="App">
