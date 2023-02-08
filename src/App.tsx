@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
-import { useQuery } from "react-query";
-import { testAPI } from "./lib/api/testAPI";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Header from "./components/Header/Header";
+import { CharacterListPage } from "./pages/CharacterListPage";
 
 function App() {
-  const { data } = useQuery("todo", () => testAPI(), {
-    onSuccess: (data) => console.log(data),
-  });
+  // const { data } = useQuery("todo", () => testAPI(), {
+  //   onSuccess: (data) => console.log(data),
+  // });
   // useEffect(() => {
   //   testAPI().then((res) => console.log(res));
   // }, []);
   return (
-    <div className="App">
-      <h1>H1</h1>
-      <img
-        src={"http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"}
-        alt="qwe"
-      />
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/chlist" element={<CharacterListPage />} />
+        <Route path="*" element={<Navigate to="/chlist" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
