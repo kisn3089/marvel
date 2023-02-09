@@ -5,9 +5,9 @@ import { HeaderContainer } from "./styles";
 const Header = () => {
   return (
     <HeaderContainer>
-      <Text content="Menu" fontSize="15px" fontWeight="700" />
-      <Text content="Marvel" fontSize="20px" fontWeight="700" />
-      <Text content="Search" fontSize="15px" fontWeight="700" />
+      <Text content="Menu" fontSize="14px" fontWeight="500" />
+      <Text content="Marvel" fontSize="18px" fontWeight="600" />
+      <Text content="Search" fontSize="14px" fontWeight="500" />
     </HeaderContainer>
   );
 };

@@ -5,8 +5,9 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 50px;
   background-color: #222;
   padding: 0 20px;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 `;

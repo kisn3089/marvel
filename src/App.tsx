@@ -1,14 +1,14 @@
+import { useQuery } from "react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header/Header";
+import { testAPI } from "./lib/api/testAPI";
 import { CharacterListPage } from "./pages/CharacterListPage";
 
 function App() {
-  // const { data } = useQuery("todo", () => testAPI(), {
-  //   onSuccess: (data) => console.log(data),
-  // });
-  // useEffect(() => {
-  //   testAPI().then((res) => console.log(res));
-  // }, []);
+  const { data } = useQuery("todo", () => testAPI(), {
+    onSuccess: (data) => console.log(data),
+  });
+
   return (
     <BrowserRouter>
       <Header />
