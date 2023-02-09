@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledImgBox = styled.div`
-  width: 100%;
+  width: ${(props) => (props.style?.width ? props.style?.width : "100%")};
   height: 100%;
   display: block;
   margin: ${(props) => props.style?.margin};
@@ -13,5 +13,4 @@ export const StyledImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  cursor: pointer;
 `;

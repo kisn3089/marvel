@@ -1,15 +1,21 @@
 import React from "react";
+import { cardData } from "../../assets/data/data";
+import { TCard } from "../../types/card.type";
 import CharacterItem from "../CharacterItem/CharacterItem";
-import { CharacterListContainer, ListWrrapper } from "./styles";
+import { CharacterListContainer, ListWrrapper, StyledLink } from "./styles";
 
-const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+interface ICharacterList {}
 
 const CharacterList = () => {
   return (
     <ListWrrapper>
       <CharacterListContainer>
-        {data.map((item) => {
-          return <CharacterItem key={item} />;
+        {cardData.map((card: TCard) => {
+          return (
+            <StyledLink to={`/chlist/${card.id}`} key={card.id}>
+              <CharacterItem name={card.name} webp={card.webp} />
+            </StyledLink>
+          );
         })}
       </CharacterListContainer>
     </ListWrrapper>

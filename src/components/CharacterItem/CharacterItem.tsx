@@ -1,11 +1,22 @@
 import React from "react";
 import ImgBox from "../../atoms/ImgBox/ImgBox";
-import { CharacterItemContainer } from "./styles";
+import Text from "../../atoms/Text/Text";
+import { TCard } from "../../types/card.type";
+import {
+  CharacterItemContainer,
+  ImgContainer,
+  ListTextContainer,
+} from "./styles";
 
-const CharacterItem = () => {
+const CharacterItem = ({ name, webp }: TCard) => {
   return (
     <CharacterItemContainer>
-      {/* <ImgBox src={} alt="test" /> */}
+      <ImgContainer>
+        <ImgBox src={webp} alt="test" />
+      </ImgContainer>
+      <ListTextContainer>
+        <Text content={name} fontSize="13px" fontWeight="500" color="#ddd" />
+      </ListTextContainer>
     </CharacterItemContainer>
   );
 };

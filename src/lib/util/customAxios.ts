@@ -3,8 +3,4 @@ import { BASE_URL } from "./constans";
 
 export const customAxios: AxiosInstance = axios.create({
   baseURL: BASE_URL,
-  //   params: {
-  //     apikey: key,
-  //     ts: new Date(),
-  //   },
 });
