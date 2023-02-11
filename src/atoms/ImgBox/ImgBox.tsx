@@ -1,5 +1,5 @@
-import React, { CSSProperties, useMemo } from "react";
-import { StyledImg, StyledImgBox } from "./styles";
+import React, { CSSProperties, useMemo } from 'react';
+import { StyledImg, StyledImgBox } from './styles';
 
 interface IImgBox extends React.HTMLAttributes<HTMLImageElement> {
   src: string;
@@ -7,6 +7,8 @@ interface IImgBox extends React.HTMLAttributes<HTMLImageElement> {
   margin?: string;
   width?: string;
   alt?: string;
+  srcSet?: string;
+  sizes?: string;
   customStyle?: CSSProperties;
   handleClick?: () => void;
 }
@@ -19,6 +21,8 @@ const ImgBox = (props: IImgBox) => {
     width,
     margin,
     alt,
+    srcSet,
+    sizes,
     customStyle,
     handleClick,
   } = props;
@@ -33,10 +37,13 @@ const ImgBox = (props: IImgBox) => {
   }, [padding, margin, customStyle]);
 
   return (
-    <StyledImgBox className={className} style={style} onClick={handleClick}>
+    <StyledImgBox className={className} onClick={handleClick}>
       <StyledImg
         src={src}
         alt={alt}
+        srcSet={srcSet}
+        style={style}
+        sizes={sizes}
         loading="lazy"
         decoding="async"
         draggable={false}

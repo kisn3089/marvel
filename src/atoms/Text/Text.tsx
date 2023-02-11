@@ -1,8 +1,8 @@
-import React, { CSSProperties } from "react";
-import { StyledText } from "./styles";
+import React, { CSSProperties } from 'react';
+import { StyledText } from './styles';
 
 interface IText extends React.HTMLAttributes<HTMLSpanElement> {
-  content: string;
+  content: string | undefined;
   customStyle?: CSSProperties;
   fontSize?: string;
   fontWeight?: string;
@@ -34,8 +34,7 @@ const Text = (props: IText) => {
       id={id}
       className={className}
       style={style}
-      onClick={handleClick}
-    >
+      onClick={handleClick}>
       {content}
     </StyledText>
   );
