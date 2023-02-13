@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CardDetailContainer = styled.section`
   display: flex;
@@ -38,6 +38,7 @@ export const PoolSourceBox = styled.div`
 `;
 
 export const DescriptionBox = styled.div`
+  text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -49,4 +50,26 @@ export const Description = styled.div`
   letter-spacing: 1;
   line-height: 1.2;
   margin-top: 10px;
+`;
+export const StatsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const StatsBox = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 70%;
+  height: 70px;
+`;
+export const CostBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 `;

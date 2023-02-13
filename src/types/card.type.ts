@@ -1,6 +1,6 @@
 export type TCard = {
   id?: number;
-  webp: string;
+  img: string;
   name: string;
   description?: string;
   stats?: {
@@ -8,5 +8,5 @@ export type TCard = {
     attack: number;
   };
   ability?: string;
-  source?: 0;
+  source?: string;
 };

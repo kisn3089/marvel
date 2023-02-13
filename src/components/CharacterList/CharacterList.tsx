@@ -13,7 +13,7 @@ const CharacterList = () => {
         {cardData.map((card: TCard) => {
           return (
             <StyledLink to={`/chlist/${card.id}`} key={card.id}>
-              <CharacterItem name={card.name} webp={card.webp} />
+              <CharacterItem name={card.name} img={card.img} />
             </StyledLink>
           );
         })}
