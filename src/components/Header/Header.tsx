@@ -1,39 +1,25 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Text from "../../atoms/Text/Text";
-import SearchInput from "../SearchInput/SearchInput";
 import { HeaderContainer } from "./styles";
+import * as Svg from "../../atoms/icons/index";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [isSearch, setIsSearch] = useState(false);
-  const [searchValue, setSearchValeu] = useState("");
-
-  const changeSearchValue = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setSearchValeu(e.target.value);
-    },
-    [searchValue]
-  );
 
   return (
     <HeaderContainer>
-      <Text content="Menu" fontSize="14px" fontWeight="500" />
+      <Svg.Menu style={{ width: "27px" }} />
       <Text
         content="Marvel"
         fontSize="18px"
         fontWeight="600"
         handleClick={() => navigate("/chlist")}
       />
-      <Text
-        content="Search"
-        fontSize="14px"
-        fontWeight="500"
-        handleClick={() => setIsSearch((prev) => !prev)}
+      <Svg.Card
+        onClick={() => navigate("/card/create")}
+        style={{ width: "37px" }}
       />
-      {isSearch && (
-        <SearchInput content={searchValue} handleChange={changeSearchValue} />
-      )}
     </HeaderContainer>
   );
 };

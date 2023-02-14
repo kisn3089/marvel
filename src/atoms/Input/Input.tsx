@@ -19,6 +19,7 @@ const Input = (props: IInput) => {
   const {
     className,
     content,
+    placeholder,
     type,
     width,
     height,
@@ -49,6 +50,7 @@ const Input = (props: IInput) => {
       value={content}
       type={type}
       style={style}
+      placeholder={placeholder}
       className={className}
       autoFocus={true}
       onChange={handleChange}

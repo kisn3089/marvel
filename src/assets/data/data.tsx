@@ -1,3 +1,4 @@
+import React from "react";
 import Abomination from "../../assets/img/cards/abomination.webp";
 import AbsorbingMan from "../../assets/img/cards/absorbing Man.webp";
 import AdamWarlock from "../../assets/img/cards/adam-warlock.webp";
@@ -5,6 +6,8 @@ import Aero from "../../assets/img/cards/aero.webp";
 import AgathaHarkness from "../../assets/img/cards/agatha-harkness.webp";
 import Agent13 from "../../assets/img/cards/agent-13.webp";
 import AgentCoulson from "../../assets/img/cards/agent-coulson.webp";
+import useLocalizing from "../../hooks/useLocalizing";
+import { TCard } from "../../types/card.type";
 
 export const ability = {
   none: "없음",
@@ -13,7 +16,12 @@ export const ability = {
   onGoing: "지속",
 } as const;
 
-export const cardData: { [index: string]: number | string | any } = [
+// export const cardData: { [index: string]: number | string | any } = [
+const tempData = () => {
+  // const translation = useLocalizing();
+  return <></>;
+};
+export const cardData: TCard[] = [
   {
     id: 1,
     img: Abomination,
@@ -103,3 +111,5 @@ export const cardData: { [index: string]: number | string | any } = [
     source: "4POOL",
   },
 ];
+
+export default React.memo(tempData);

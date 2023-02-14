@@ -1,12 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const fadeUp = keyframes`
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 export const CardDetailContainer = styled.section`
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   width: 100%;
   height: 600px;
-  /* border: 1px solid skyblue; */
 `;
 
 export const CardImgContainer = styled.div`
@@ -14,6 +23,7 @@ export const CardImgContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 200px;
+  animation: ${fadeUp} 0.4s ease-in-out;
 `;
 
 export const CardBottomBox = styled.div`

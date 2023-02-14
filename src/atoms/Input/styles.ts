@@ -15,4 +15,12 @@ export const StyledInput = styled.input`
     props.style?.fontWeight ? props.style?.fontWeight : "500"};
   padding: ${(props) =>
     props.style?.padding ? props.style?.padding : "0 20px"};
+  box-shadow: ${(props) =>
+    props.style?.boxShadow ? props.style?.boxShadow : "none"};
+  transition: 0.3s ease-in-out;
+  -webkit-appearance: none;
+  // IOS box-shadow 먹게 만드는것
+  &:focus {
+    box-shadow: 0 0 5px 1px skyblue;
+  }
 `;

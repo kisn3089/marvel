@@ -1,25 +1,37 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import Input from "../../atoms/Input/Input";
-import { SearchContainer } from "./styles";
+import { SearchBarBox, SearchContainer } from "./styles";
 
 interface ISearchInput {
   content: string;
+  placeholder?: string;
+  customStyle?: CSSProperties;
   handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
-const SearchInput = ({ content, handleChange }: ISearchInput) => {
+const SearchInput = ({
+  content,
+  placeholder,
+  customStyle,
+  handleChange,
+}: ISearchInput) => {
   return (
-    <SearchContainer>
-      <Input
-        type="text"
-        content={content}
-        width="100%"
-        height="30px"
-        border="1px solid rgb(135, 206, 235, 0.5)"
-        customStyle={{ borderRadius: "5px" }}
-        handleChange={handleChange}
-      />
-    </SearchContainer>
+    <SearchBarBox>
+      <SearchContainer>
+        <Input
+          type="text"
+          content={content}
+          width="100%"
+          height="30px"
+          placeholder={placeholder}
+          fontSize="16px"
+          border="1px solid rgb(135, 206, 235, 0.5)"
+          customStyle={customStyle}
+          handleChange={handleChange}
+        />
+      </SearchContainer>
+    </SearchBarBox>
   );
 };
 
