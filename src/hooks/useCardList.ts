@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { cardData } from "../assets/data/data";
+import { cardData } from "../assets/data/DummyData";
 import { TCard } from "../types/card.type";
 
 const useCardList = () => {

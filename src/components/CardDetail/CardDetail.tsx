@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { cardData } from "../../assets/data/data";
+import { cardData } from "../../assets/data/DummyData";
 import AbilityCircle from "../../atoms/AbilityCircle/AbilityCircle";
 import ImgBox from "../../atoms/ImgBox/ImgBox";
 import Source from "../../atoms/Source/Source";

@@ -15,7 +15,7 @@ const CharacterItem = ({ name, img }: TCard) => {
         <ImgBox src={img} alt="" />
       </ImgContainer>
       <ListTextContainer>
-        <Text content={name} fontSize="13px" fontWeight="500" color="#ddd" />
+        <Text content={name} fontSize="14px" fontWeight="500" color="#ddd" />
       </ListTextContainer>
     </CharacterItemContainer>
   );

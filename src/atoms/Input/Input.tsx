@@ -52,7 +52,7 @@ const Input = (props: IInput) => {
       style={style}
       placeholder={placeholder}
       className={className}
-      autoFocus={true}
+      // autoFocus={true}
       onChange={handleChange}
     />
   );

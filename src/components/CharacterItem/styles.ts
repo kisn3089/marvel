@@ -2,11 +2,8 @@ import styled from "styled-components";
 import { fadeUp } from "../CardDetail/styles";
 
 export const CharacterItemContainer = styled.div`
-  padding: 10px 0 0 0;
-  width: 120px;
-  height: 160px;
-  box-shadow: 0 0 5px 0.1px #888;
-  border-radius: 5px;
+  width: 90px;
+  height: 150px;
   cursor: pointer;
   animation: ${fadeUp} 0.4s ease-in-out;
 `;

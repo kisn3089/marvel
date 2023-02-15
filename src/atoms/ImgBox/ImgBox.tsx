@@ -1,10 +1,11 @@
-import React, { CSSProperties, useMemo } from 'react';
-import { StyledImg, StyledImgBox } from './styles';
+import React, { CSSProperties, useMemo } from "react";
+import { StyledImg, StyledImgBox } from "./styles";
 
 interface IImgBox extends React.HTMLAttributes<HTMLImageElement> {
   src: string;
   padding?: string;
   margin?: string;
+  height?: string;
   width?: string;
   alt?: string;
   srcSet?: string;
@@ -19,6 +20,7 @@ const ImgBox = (props: IImgBox) => {
     src,
     padding,
     width,
+    height,
     margin,
     alt,
     srcSet,
@@ -31,7 +33,8 @@ const ImgBox = (props: IImgBox) => {
     return {
       padding,
       margin,
-      width,
+      // width,
+      height,
       ...customStyle,
     };
   }, [padding, margin, customStyle]);
