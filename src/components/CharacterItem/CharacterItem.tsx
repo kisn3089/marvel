@@ -8,11 +8,28 @@ import {
   ListTextContainer,
 } from "./styles";
 
-const CharacterItem = ({ name, img }: TCard) => {
+interface ICharacterItem extends TCard {
+  isSelected?: boolean;
+  toggleSelected?: (e: React.MouseEvent<HTMLImageElement>) => void;
+}
+
+const CharacterItem = ({
+  id,
+  name,
+  img,
+  isSelected,
+  toggleSelected,
+}: ICharacterItem) => {
   return (
     <CharacterItemContainer>
       <ImgContainer>
-        <ImgBox src={img} alt="" />
+        <ImgBox
+          id={String(id)}
+          src={img}
+          alt=""
+          isSelected={isSelected}
+          handleClick={toggleSelected}
+        />
       </ImgContainer>
       <ListTextContainer>
         <Text content={name} fontSize="14px" fontWeight="500" color="#ddd" />

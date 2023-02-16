@@ -10,8 +10,9 @@ interface IImgBox extends React.HTMLAttributes<HTMLImageElement> {
   alt?: string;
   srcSet?: string;
   sizes?: string;
+  isSelected?: boolean;
   customStyle?: CSSProperties;
-  handleClick?: () => void;
+  handleClick?: (e: React.MouseEvent<HTMLImageElement>) => void;
 }
 
 const ImgBox = (props: IImgBox) => {
@@ -20,11 +21,13 @@ const ImgBox = (props: IImgBox) => {
     src,
     padding,
     width,
+    id,
     height,
     margin,
     alt,
     srcSet,
     sizes,
+    isSelected,
     customStyle,
     handleClick,
   } = props;
@@ -40,7 +43,7 @@ const ImgBox = (props: IImgBox) => {
   }, [padding, margin, customStyle]);
 
   return (
-    <StyledImgBox className={className} onClick={handleClick}>
+    <StyledImgBox id={id} className={className} onClick={handleClick}>
       <StyledImg
         src={src}
         alt={alt}
@@ -50,6 +53,7 @@ const ImgBox = (props: IImgBox) => {
         loading="lazy"
         decoding="async"
         draggable={false}
+        isSelected={isSelected}
       />
     </StyledImgBox>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import useCardList from "../../hooks/useCardList";
+import useSelected from "../../hooks/useSelected";
 import { TCard } from "../../types/card.type";
 import CharacterItem from "../CharacterItem/CharacterItem";
 import CreateItem from "../CreateItem/CreateItem";
@@ -10,6 +11,8 @@ const item = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const CreateCard = () => {
   const { cardList } = useCardList();
+  const { editIdx, isSelected, toggleSelected } = useSelected();
+  console.log(editIdx);
 
   return (
     <CreateCardContainer>
@@ -17,8 +20,17 @@ const CreateCard = () => {
         return <CreateItem key={card} />;
       })}
       <CardListContainer>
-        {cardList.map((card: TCard) => {
-          return <CharacterItem img={card.img} name={card.name} />;
+        {cardList.map((card: TCard, i: number) => {
+          return (
+            <CharacterItem
+              key={i}
+              id={i}
+              img={card.img}
+              name={card.name}
+              isSelected={isSelected && editIdx === i}
+              toggleSelected={toggleSelected}
+            />
+          );
         })}
       </CardListContainer>
     </CreateCardContainer>

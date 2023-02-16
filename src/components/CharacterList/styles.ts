@@ -11,10 +11,11 @@ export const ListWrrapper = styled.div`
 export const CharacterListContainer = styled.section`
   margin-top: 20px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 3px;
   padding: 0 10px;
-  width: 390px;
+  width: 100%;
 `;
 
 export const StyledLink = styled(Link)`

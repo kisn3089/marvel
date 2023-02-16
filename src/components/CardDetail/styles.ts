@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const fadeUp = keyframes`
   0% {
-    transform: translateY(30%);
+    transform: translateY(20%);
     opacity: 0;
   }
   100% {
