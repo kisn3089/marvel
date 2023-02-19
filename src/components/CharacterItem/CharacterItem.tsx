@@ -1,12 +1,12 @@
-import React from "react";
-import ImgBox from "../../atoms/ImgBox/ImgBox";
-import Text from "../../atoms/Text/Text";
-import { TCard } from "../../types/card.type";
+import React from 'react';
+import ImgBox from '../../atoms/ImgBox/ImgBox';
+import Text from '../../atoms/Text/Text';
+import { TCard } from '../../types/card.type';
 import {
   CharacterItemContainer,
   ImgContainer,
   ListTextContainer,
-} from "./styles";
+} from './styles';
 
 interface ICharacterItem extends TCard {
   isSelected?: boolean;

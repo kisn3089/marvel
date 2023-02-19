@@ -1,8 +1,8 @@
-import React, { CSSProperties, useMemo } from "react";
-import { StyledImg, StyledImgBox } from "./styles";
+import React, { CSSProperties, useMemo } from 'react';
+import { StyledImg, StyledImgBox } from './styles';
 
 interface IImgBox extends React.HTMLAttributes<HTMLImageElement> {
-  src: string;
+  src?: string;
   padding?: string;
   margin?: string;
   height?: string;

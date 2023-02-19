@@ -1,23 +1,18 @@
-import React from "react";
+import React from 'react';
 
 const useSelected = () => {
-  const [isSelected, setIsSelected] = React.useState(false);
-  const [editIdx, setIsIdx] = React.useState(0);
+  const [selectedCard, setSelectedCard] = React.useState<string[]>([]);
 
   const toggleSelected = React.useCallback(
     (e: React.MouseEvent<HTMLImageElement>) => {
       const { id } = e.currentTarget;
-      if (Number(id) === editIdx) {
-        setIsIdx(999);
-        setIsSelected(false);
-      } else {
-        setIsIdx(Number(id));
-        setIsSelected(true);
-      }
+      selectedCard.includes(id)
+        ? setSelectedCard(selectedCard.filter((item) => item !== id))
+        : setSelectedCard([...selectedCard, id]);
     },
-    [editIdx]
+    [selectedCard]
   );
-  return { editIdx, isSelected, toggleSelected };
+  return { selectedCard, toggleSelected };
 };
 
 export default useSelected;

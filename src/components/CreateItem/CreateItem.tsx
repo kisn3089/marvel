@@ -1,12 +1,18 @@
-import React from "react";
-import { cardData } from "../../assets/data/DummyData";
-import ImgBox from "../../atoms/ImgBox/ImgBox";
-import { CreateItemContainer } from "./styles";
+import React from 'react';
+import ImgBox from '../../atoms/ImgBox/ImgBox';
+import { CreateItemContainer } from './styles';
 
-const CreateItem = () => {
+interface ICreateItem {
+  // cardList
+  pickedCard?: string | undefined;
+}
+
+const CreateItem = ({ pickedCard }: ICreateItem) => {
+  console.log(pickedCard);
+
   return (
     <CreateItemContainer>
-      {/* <ImgBox src={cardData[0].img} /> */}
+      <ImgBox src={pickedCard} />
     </CreateItemContainer>
   );
 };
