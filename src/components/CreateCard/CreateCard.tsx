@@ -1,4 +1,5 @@
 import React from 'react';
+import Text from '../../atoms/Text/Text';
 import useCardList from '../../hooks/useCardList';
 import useSelected from '../../hooks/useSelected';
 import { TCard } from '../../types/card.type';
@@ -11,16 +12,16 @@ const item = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const CreateCard = () => {
   const { cardList } = useCardList();
-  const { selectedCard, toggleSelected } = useSelected();
-  console.log(cardList);
+  const { selectedCard, cardStatus, toggleSelected } = useSelected();
+  console.log(selectedCard);
 
   return (
     <CreateCardContainer>
+      {cardStatus.isActive && <Text content={cardStatus.status} />}
       {item.map((_: number, i: number) => {
         return (
           <CreateItem
             key={i}
-            // cardList={cardList}
             pickedCard={cardList[Number(selectedCard[i])]?.img}
           />
         );
