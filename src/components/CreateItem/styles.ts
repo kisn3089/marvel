@@ -1,27 +1,15 @@
-import styled, { keyframes } from 'styled-components';
+import styled from "styled-components";
 
-const opacityAnimation = keyframes`
-    0% {
-        box-shadow: 0 0 5px 1px #c6c6c6;
-    }
-    50% {
-        box-shadow: 0 0 5px 1px skyblue;
-    }
-    100% {
-        box-shadow: 0 0 5px 1px #c6c6c6;
-    }
-`;
-
-export const CreateItemContainer = styled.div`
+export const CreateItemContainer = styled.div<{ pickedCard?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 65px;
   height: 100px;
-  /* box-shadow: 0 0 5px 1px #c6c6c6; */
-  /* transition: 0.5s ease-in-out; */
+  box-shadow: ${(props) =>
+    props.pickedCard ? "0 0 5px 1px #cd2640" : "0 0 5px 1px skyblue"};
+  transition: 0.5s ease-in-out;
   border-radius: 5px;
-  animation: ${opacityAnimation} 4s ease-in-out infinite;
 `;
 
 export const CardListContainer = styled.div`

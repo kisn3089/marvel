@@ -1,6 +1,6 @@
-import React from 'react';
-import ImgBox from '../../atoms/ImgBox/ImgBox';
-import { CreateItemContainer } from './styles';
+import React from "react";
+import ImgBox from "../../atoms/ImgBox/ImgBox";
+import { CreateItemContainer } from "./styles";
 
 interface ICreateItem {
   pickedCard?: string | undefined;
@@ -8,7 +8,7 @@ interface ICreateItem {
 
 const CreateItem = ({ pickedCard }: ICreateItem) => {
   return (
-    <CreateItemContainer>
+    <CreateItemContainer pickedCard={pickedCard !== undefined}>
       {pickedCard && <ImgBox src={pickedCard} />}
     </CreateItemContainer>
   );
