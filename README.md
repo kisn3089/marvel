@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+## Marvel Snap (Mobile)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Marvel Snap 게임의 카드 정보를 확인하고 덱을 만들어 볼 수 있는 서비스
 
-## Available Scripts
+#### 소요기간 2023.02.07 -> 2023.02.21 (2주)
 
-In the project directory, you can run:
+### Update
 
-### `npm start`
+```
+- 덱생성 페이지 가상의 카드덱이 10개 모두 찼을 경우 안내메세지 출력
+- 덱생성 페이지 카드를 클릭하면 가상의 덱에 채워지고 그레이 스케일로 추가됨을 보여줌
+- 덱생성 페이지 카드 추가할때마다 로컬 스토리지에 저장해서 다음에 들어왔을때 동기화 완료
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> 공식적으로 지원해주는 API가 개발중이므로 임의로 데이터를 만들어서 진행하였고 추후에 API 지원되면 카드를 늘릴 계획입니다!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Deployment Vercel: https://marvel-vert-nine.vercel.app/chlist
 
-### `npm test`
+### 실행 방법
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ npm i && npm start
+```
 
-### `npm run build`
+### Technology
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- TypeScript
+- CSS
+  - StyledComponents
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 반응형
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+- Mobile (Iphone 13 pro 기준)
+```
 
-### `npm run eject`
+### 구현
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- 오픈 API가 없어 데이터를 임의로 생성
+- 카드 이름으로 검색
+- 카드 상세보기 페이지에 카드 정보 확인
+- 가상 카드 덱 생성 기능
+- 가상 카드덱을 로컬 스토리지에 저장하여 동기화
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 초기 화면
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img src="https://user-images.githubusercontent.com/96061695/230086414-d7aa05af-d2f5-4aaa-abca-139fae015088.jpg" width="300px" />
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 카드 상세보기
 
-## Learn More
+<img src="https://user-images.githubusercontent.com/96061695/230086557-90810a76-af0a-4768-a16b-c0497667f887.jpg" width="300px" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 카드 검색
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://user-images.githubusercontent.com/96061695/230086746-26265c61-2f50-4df0-b924-bae7a98d2c6b.jpg" width="300px" />
+
+#### 가상 덱생성 페이지
+
+<img src="https://user-images.githubusercontent.com/96061695/230086967-f207f5c2-bd4c-441f-909c-944ae89aef77.jpg" width="300px" />
+
+#### 가상 덱생성
+
+<img src="https://user-images.githubusercontent.com/96061695/230087537-4f43b8e7-0784-4d51-a6ec-39b6def2b553.jpg" width="300px" />
