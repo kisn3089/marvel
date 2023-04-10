@@ -1,14 +1,3 @@
-import Abomination from '../../assets/img/cards/abomination.webp';
-import AbsorbingMan from '../../assets/img/cards/absorbing Man.webp';
-import AdamWarlock from '../../assets/img/cards/adam-warlock.webp';
-import Aero from '../../assets/img/cards/aero.webp';
-import AgathaHarkness from '../../assets/img/cards/agatha-harkness.webp';
-import Agent13 from '../../assets/img/cards/agent-13.webp';
-import AgentCoulson from '../../assets/img/cards/agent-coulson.webp';
-import AmericaChavez from '../../assets/img/cards/america-chavez.webp';
-import Angel from '../../assets/img/cards/angel.webp';
-import Angela from '../../assets/img/cards/angela.webp';
-import AntMan from '../../assets/img/cards/ant-man.webp';
 import { TCard } from '../../types/card.type';
 
 export const ability = {
@@ -21,7 +10,7 @@ export const ability = {
 export const cardData: TCard[] = [
   {
     id: 1,
-    img: Abomination,
+    img: `${process.env.PUBLIC_URL}/img/abomination.webp`,
     name: '어보미네이션',
     description: '멍청한 놈들! 나한테는 안되지!',
     stats: {
@@ -33,7 +22,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 2,
-    img: AbsorbingMan,
+    img: `${process.env.PUBLIC_URL}/img/absorbing Man.webp`,
     name: '업소빙맨',
     description:
       '출현: 자신이 마지막으로 낸 카드가 출현 능력을 갖고 있을 경우, 이 카드가 그 능력을 복제합니다.',
@@ -46,7 +35,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 3,
-    img: AdamWarlock,
+    img: `${process.env.PUBLIC_URL}/img/adam-warlock.webp`,
     name: '아담 워록',
     description:
       '턴이 끝날 때마다 이 구역에서 앞서고 있으면 카드 한 장을 뽑습니다.',
@@ -59,7 +48,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 4,
-    img: Aero,
+    img: `${process.env.PUBLIC_URL}/img/aero.webp`,
     name: '에어로',
     description:
       '출현: 이번 턴에 상대가 낸 카드를 모두 이 구역으로 이동시킵니다.',
@@ -72,7 +61,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 5,
-    img: AgathaHarkness,
+    img: `${process.env.PUBLIC_URL}/img/agatha-harkness.webp`,
     name: '애거사 하크니스',
     description:
       '애거사는 시작 시 내 손에 들어있으며 나를 대신해 카드를 냅니다.',
@@ -85,7 +74,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 6,
-    img: Agent13,
+    img: `${process.env.PUBLIC_URL}/img/agent-13.webp`,
     name: '에이전트 13',
     description: '출현: 임의의 카드 한 장을 내 손에 추가합니다.',
     stats: {
@@ -97,7 +86,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 7,
-    img: AgentCoulson,
+    img: `${process.env.PUBLIC_URL}/img/agent-coulson.webp`,
     name: '에이전트 콜슨',
     description: '내 손에 비용 4 및 5의 카드 한 장씩을 무작위로 추가합니다.',
     stats: {
@@ -109,7 +98,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 8,
-    img: AmericaChavez,
+    img: `${process.env.PUBLIC_URL}/img/america-chavez.webp`,
     name: '아메리카 차베즈',
     description: '6턴에 반드시 이 카드를 뽑습니다. 그전에는 뽑을 수 없습니다.',
     stats: {
@@ -121,7 +110,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 9,
-    img: Angel,
+    img: `${process.env.PUBLIC_URL}/img/angel.webp`,
     name: '엔젤',
     description:
       '내 카드 한 장이 파괴되면, 이 카드가 덱에서 날아와 파괴된 카드를 대체합니다.',
@@ -134,7 +123,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 10,
-    img: Angela,
+    img: `${process.env.PUBLIC_URL}/img/angela.webp`,
     name: '안젤라',
     description: '이 구영에 카드를 내면 +2파워를 부여합니다.',
     stats: {
@@ -146,7 +135,7 @@ export const cardData: TCard[] = [
   },
   {
     id: 11,
-    img: AntMan,
+    img: `${process.env.PUBLIC_URL}/img/ant-man.webp`,
     name: '앤트맨',
     description:
       '이 구역에 내 다른 카드가 3장 배치되어 있을 경우, +3파워를 부여합니다.',
